@@ -1,0 +1,161 @@
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('cinzel-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('cinzel-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('cinzel-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+header h1 {
+  text-align: center;       
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+body {
+background: grey;
+  margin: 0;
+}
+
+main {
+  font-family: 'Cinzel', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); 
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+nav {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 2rem; 
+  text-align: center;
+  position: relative;
+  z-index: 10;                     
+}
+
+nav ul li {
+    
+    display: inline;
+}
+
+#hamIcon{display:none;}
+@media screen and (max-width:800px){
+/*make a menu items vertical*/
+nav ul li{display:block;}
+/* unhide menu icon */
+#hamIcon{display:block;}
+/*hide the menu item list*/
+nav ul{display:none;}
+}
+
+/*to unhide menu items*/
+.menuShow{
+  display:block;
+  position: relative;
+/* Ensure menu items appear above everything */
+  z-index: 15;
+/* Match body background to hide content behind */
+  background: grey;                
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .page {
+    width: 95vw;                   
+    padding: 1rem;                 
+    top: 100px;                    
+    min-height: 50vh;             
+  }
+  
+  main {
+    min-height: calc(100vh - 100px); 
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    width: 98vw;                  
+    padding: 0.75rem;             
+    top: 90px;                    
+    font-size: 0.9rem;            
+  }
+  
+  nav {
+    margin-bottom: 1rem;         
+  }
+}
+
+.page {
+  font-family: 'Cinzel', serif;
+  width: 80vw;
+  /* Prevent pages from getting too wide on large screens */
+  max-width: 1200px;               
+  /* Allow height to auto adjust*/
+  height: auto;                    
+  min-height: 60vh;                
+  position: absolute; 
+  /* Move to center horizontally */             
+  left: 50%;                       
+  top: 120px;          
+  /* Center the element */            
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  pointer-events: none;
+  padding: 2rem;        
+  /* Include padding in width calculation */          
+  box-sizing: border-box;          
+  overflow-y: auto;                
+}
+
+.page.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  /* Lower z-index than nav menu so appear behind nav */
+  z-index: 1;
+}
+
+
+#page1 { background: beige; }
+#page2 { background: azure; }
+#page3 { background: papayawhip; }
+#page4 { background: papayawhip; }
+
+
+#swordId {position: relative;width:10vw; transition: all 0.5s;}
+#swordId.shrink{width:5vw;opacity: 0;}
+#swordId.anim1{ animation: swordFrames 1s;}
+
+
+#helmetId {position: relative;width:10vw; transition: all 0.5s;}
+#helmetId.shrink{width:5vw;opacity: 0;}
+#helmetId.anim1{ animation: swordFrames 1s;}
