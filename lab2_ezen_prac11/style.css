@@ -24,6 +24,7 @@
 }
 
 header h1 {
+  color: aliceblue;
   text-align: center;       
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
@@ -34,7 +35,8 @@ header h1 {
 }
 
 body {
-background: grey;
+background-image: url(background\ hema.jpg);
+background-position: center;
   margin: 0;
 }
 
@@ -79,7 +81,7 @@ nav ul{display:none;}
 /* Ensure menu items appear above everything */
   z-index: 15;
 /* Match body background to hide content behind */
-  background: grey;                
+  background: papayawhip;                
   padding: 1rem;
   border-radius: 5px;
 }
@@ -145,17 +147,79 @@ nav ul{display:none;}
 }
 
 
-#page1 { background: beige; }
-#page2 { background: azure; }
+
+#page1 { background: papayawhip; }
+#page2 { background: papayawhip; }
 #page3 { background: papayawhip; }
 #page4 { background: papayawhip; }
 
 
-#swordId {position: relative;width:10vw; transition: all 0.5s;}
-#swordId.shrink{width:5vw;opacity: 0;}
-#swordId.anim1{ animation: swordFrames 1s;}
+#manualId {
+  transform: translatex(50%);
+   position: relative;
+    width: 50%; 
 
+}
 
-#helmetId {position: relative;width:10vw; transition: all 0.5s;}
-#helmetId.shrink{width:5vw;opacity: 0;}
-#helmetId.anim1{ animation: swordFrames 1s;}
+#swordId {
+    position: relative;
+    width: 10vw; 
+    min-width: 60px;  
+    max-width: 120px; 
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#helmetId {
+    position: relative;
+    width: 10vw;
+    min-width: 60px;  
+    max-width: 120px; 
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #swordId, #helmetId {
+        width: 15vw;
+        min-width: 50px;
+        max-width: 80px;
+    }
+    
+    #game {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #swordId, #helmetId {
+        width: 20vw;
+        min-width: 45px;
+        max-width: 70px;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    margin: 1rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Optional: Add some styling to match your HEMA theme */
+.video-container {
+    border: 2px solid #8B4513; /* Brown border to match medieval theme */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

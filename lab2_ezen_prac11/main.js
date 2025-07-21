@@ -10,7 +10,7 @@ const btnSubmit=document.querySelector("#btnSubmit");
 const btnSubmit2=document.querySelector("#btnSubmit2");
 const scorebox=document.querySelector("#scorebox"); 
 const scorebox2=document.querySelector("#scorebox2"); 
-const scorebox3 = document.getElementById("scoreBox3");
+const scorebox3 = document.getElementById("scorebox3");
 
 function hideall() {
   for (let onepage of allpages) {
@@ -130,17 +130,18 @@ function GetRandom(min,max){
 return Math.round(Math.random() * (max - min)) + min;
 }
 function MoveSword() {
-swordId.style.left = GetRandom(0, 800) + "px";
-swordId.style.top = GetRandom(0, 180) + "px";
+    // Simple responsive positioning - use percentage of window size
+    const maxWidth = window.innerWidth * 0.6; 
+    const maxHeight = window.innerHeight * 0.3;
+    
+    swordId.style.left = GetRandom(0, maxWidth) + "px";
+    swordId.style.top = GetRandom(0, maxHeight) + "px";
 }
-
 moveSwordItvId = setInterval(MoveSword, 500);
 
-const scoreBox3=document.getElementById("scoreBox");
-
 function swordCatch() {
-//increases score after clicking
-score3--;
+//decreases score after clicking
+score3-=10;
 //update html scorebox
 scoreBox3.innerHTML = "Score: " + score3;
 }
@@ -155,10 +156,13 @@ function GetRandom(min,max){
 return Math.round(Math.random() * (max - min)) + min;
 }
 function MoveHelmet() {
-helmetId.style.left = GetRandom(0, 800) + "px";
-helmetId.style.top = GetRandom(0, 180) + "px";
+    // Simple responsive positioning - use percentage of window size
+    const maxWidth = window.innerWidth * 0.7; // 70% of screen width
+    const maxHeight = window.innerHeight * 0.4; // 40% of screen height
+    
+    helmetId.style.left = GetRandom(0, maxWidth) + "px";
+    helmetId.style.top = GetRandom(0, maxHeight) + "px";
 }
-
 moveHelmetItvId = setInterval(MoveHelmet, 1000);
 
 function helmetCatch() {
@@ -169,3 +173,9 @@ scoreBox3.innerHTML = "Score: " + score3;
 }
 //link durian to mouseclick to durianCatch function
 helmetId.addEventListener("click",helmetCatch);
+
+window.addEventListener('resize', function() {
+    // Move items to new valid positions after resize
+    MoveSword();
+    MoveHelmet();
+});
