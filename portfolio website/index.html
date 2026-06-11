@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Portfolio</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Loo Ezen</div>
+        <ul class="nav-links">
+           <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+             <li><a href="works.html">Works</a></li>
+        </ul>
+    </nav>
+
+ <header id="home" class="hero" style="background-image: url('images/hero-bg.jpg');">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Ezen</span>.</h1>
+            <p>I am a student that is currently studying Game Development</p>
+           <a href="#about" class="btn">Get to Know Me</a>
+        </div>
+    </header>
+
+   
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>Personal Introduction</h2>
+        <p>my journey to game development started in Polytechnic but my passion for games sparked much sooner. 
+           It started as a simple interest in playing games, before having the urge to make my own game and thus pursuing a course in Game development which landed me here in Nanyang Polytechnic. 
+           I enjoy making fast-paced action games and am a massive fan of the mecha genre when it comes to games. 
+           I enjoy working in teams as i believe a tightly knit community working on a shared goal is great for forming bonds. 
+           Working in a team also allows me to broaden my horizons, view different perspectives, and overall improve as a developer.</p>
+    </section>
+
+
+
+ <section class="container">
+        <div class="category-grid">
+            
+            <!-- About Me Card -->
+            <a href="about.html" class="category-card" style="background-image: url('images/about-bg.jpg');">
+                <div class="card-overlay">
+                    <div class="card-content">
+                        <i class="fas fa-user"></i>
+                        <h3>About Me</h3>
+                        <p>Learn who I am</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Education Card -->
+            <a href="education.html" class="category-card" style="background-image: url('images/education-bg.jpg');">
+                <div class="card-overlay">
+                    <div class="card-content">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <p>My background</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Hobbies Card -->
+            <a href="hobbies.html" class="category-card" style="background-image: url('images/hobbies-bg.jpg');">
+                <div class="card-overlay">
+                    <div class="card-content">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Hobbies</h3>
+                        <p>What I love</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Loo Ezen. All rights reserved.</p>
+        <div class="socials">
+           <a href="https://www.linkedin.com/in/ezen-loo-6444363a3"><i class="fab fa-linkedin"></i></a>
+
+        
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

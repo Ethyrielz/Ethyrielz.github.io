@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Loo Ezen</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="works.html">Works</a></li>
+        </ul>
+    </nav>
+
+    <!-- Works Section -->
+<section class="works-section">
+    <h1>My Works</h1>
+    <p class="works-intro">Here are some of the old projects I've made during my time in NYP</p>
+    
+    <div class="works-grid">
+
+
+         <!-- Project 1 + its video side by side -->
+        <div class="works-row">
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="images/impernanence.png" alt="Project 2">
+                </div>
+                <div class="work-details">
+                    <h3>Impermanence</h3>
+                    <p>This project was done in our Work Integrated Unit in year 2 of NYP, where we worked with a team of artists</p>
+                    <div class="work-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image" style="padding: 0; background: black;">
+                    <video class="work-video" controls preload="metadata">
+                        <source src="videos/Pain2.mp4" type="video/mp4">
+                        </video>
+                </div>
+                <div class="work-details">
+                    <h3>Impermanence gameplay</h3>
+                    <p>Video for Impermanence</p>
+                    <div class="work-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+        <!-- Project 2 + its video side by side -->
+        <div class="works-row">
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="images/dungeon-brawl.png" alt="Project 2">
+                </div>
+                <div class="work-details">
+                    <h3>Dungeon Brawl</h3>
+                    <p>This was a 2d soulsllike action platformer I made for a project assignment in school</p>
+                    <div class="work-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image" style="padding: 0; background: black;">
+                   <video class="work-video" controls preload="metadata">
+                         <source src="videos/dungeon.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="work-details">
+                    <h3>Dungeon Brawl gameplay</h3>
+                    <p>Video for Dungeon Brawl</p>
+                    <div class="work-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 (no video) -->
+        <div class="works-row">
+            <div class="work-card">
+                <div class="work-details">
+                    <h3>Project Title 3</h3>
+                    <p>This very website! Made for your viewing pleasure</p>
+                    <div class="work-tags">
+                        <span class="tag">Html, Css, JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 + its video side by side -->
+        <div class="works-row">
+            <div class="work-card">
+                <div class="work-image">
+                    <img src="images/HideNSeek_ScreenShot.png" alt="Project 4 Gameplay">
+                </div>
+                <div class="work-details">
+                    <h3>In/Sanity</h3>
+                    <p>A project made with some friends for a project back when we were first learning how to code.</p>
+                    <div class="work-tags">
+                        <span class="tag">Visual Studios 2022</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-image" style="padding: 0; background: black;">
+                    <video class="work-video" controls preload="metadata">
+                        <source src="videos/In_Sanity_trailer.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="work-details">
+                    <h3>In/Sanity gameplay trailer</h3>
+                    <p>Video for In/Sanity</p>
+                    <div class="work-tags">
+                        <span class="tag">Visual Studios 2022</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> name. All rights reserved.</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/ezen-loo-6444363a3"><i class="fab fa-linkedin"></i></a>
+          
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
